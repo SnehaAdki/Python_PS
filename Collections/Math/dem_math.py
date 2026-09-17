@@ -11,4 +11,4 @@ print(math.factorial(5))  # Output: 120
 print(math.floor(4.55555)) #output 4
 print(math.ceil(4.55555)) # output 5
 print(math.log(100, 10)) # output 2.0
-print(math.round(4.55555, 2)) # output 4.56
+print(round(4.55555, 2)) # output 4.56

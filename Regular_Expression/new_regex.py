@@ -69,5 +69,25 @@ test_phrase = 'This is a string! But it has punctuation. How can we remove it?'
 print(re.findall(r'[^!.? ]+',test_phrase)) #['This', 'is', 'a', 'string', 'But', 'it', 'has', 'punctuation', 'How', 'can', 'we', 'remove', 'it']
 
 
+### square brahckets 
+# for grouping things together either inclusive or exclusive
+
+text = 'Only find the hypen-words in this sentence. But you do not know how long-ish they are'
+print(re.findall(r'[\w]+-[\w]+',text)) #['hypen-words', 'long-ish']
+
+text = 'Hello, would you like some catfish?'
+texttwo = 'Hello, would you like some catnap?'
+textthree = 'Hello, would you like some caterpillar?'
+
+
+print(re.search(r'cat(fish|nap|erpillar)',text).group()) #catfish
+
+print(re.search(r'cat(fish|nap|erpillar)',texttwo).group()) #catnap
+
+print(re.search(r'cat(fish|nap|erpillar)',textthree).group()) #caterpillar
+
+
+
+
 
 
